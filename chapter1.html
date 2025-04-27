@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1 – Arjuna Vishad Yog</title>
+    <link rel="stylesheet" href="css/chapter-style.css">
+  </head>
+  <body>
+
+    <!-- New Navbar -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="index.html" class="home-button">🏠 Home</a>
+
+        <!-- Chapter Dropdown -->
+        <div class="dropdown">
+          <button class="dropbtn">📖 Chapters</button>
+          <div class="dropdown-content">
+            <a href="chapter1.html">Chapter 1 - Arjuna Vishad Yog</a>
+            <a href="chapter2.html">Chapter 2 - Sankhya Yog</a>
+            <a href="chapter3.html">Chapter 3 - Karma Yog</a>
+            <a href="chapter4.html">Chapter 4 - Jnana Yog</a>
+            <a href="chapter5.html">Chapter 5 - Karma Sanyas Yog</a>
+            <a href="chapter6.html">Chapter 6: आत्मसंयम योग</a>
+          <a href="chapter7.html">Chapter 7: ज्ञानविज्ञान योग</a>
+          <a href="chapter8.html">Chapter 8: अक्षर ब्रह्म योग</a>
+          <a href="chapter9.html">Chapter 9: राजविद्या योग</a>
+          <a href="chapter10.html">Chapter 10: विभूति योग</a>
+          <a href="chapter11.html">Chapter 11: विश्वरूप दर्शन योग</a>
+          <a href="chapter12.html">Chapter 12: भक्ति योग</a>
+          <a href="chapter13.html">Chapter 13: क्षेत्रक्षेत्रज्ञ विभाग योग</a>
+          <a href="chapter14.html">Chapter 14: गुणत्रय विभाग योग</a>
+          <a href="chapter15.html">Chapter 15: पुरुषोत्तम योग</a>
+          <a href="chapter16.html">Chapter 16: दैवासुर संपत्ति विभाग योग</a>
+          <a href="chapter17.html">Chapter 17: श्रद्धात्रय विभाग योग</a>
+          <a href="chapter18.html">Chapter 18: मोक्ष संन्यास योग</a>
+          </div>
+        </div>
+
+        <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
+      </div>
+    </nav>
+
+    <header>
+      <h1>अर्जुन विषाद योग</h1>
+      <p>Chapter 1 of Bhagavad Gita</p>
+      <!-- Search bar -->
+      <div class="search-bar">
+        <input type="number" id="shlokaNumber"
+          placeholder="Shloka number daalein" />
+        <button onclick="searchShloka()">Search Karein</button>
+      </div>
+    </header>
+
+    <!-- Ye empty div hai jisme JS data insert karega -->
+    <main class="shloka-container" id="shlokas"></main>
+
+    <!-- BUTTON FOR TOP TO BOTTOM -->
+    <button id="backToTopBtn" title="Back to Top">🔝 ऊपर जाएं</button>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 Bhagavad Gita Project by Suraj Gupta</p>
+    </footer>
+
+    <!-- IMPORTANT: Correct JS file -->
+    <script src="js/loadShlokas.js"></script>
+    <script>
+     // Call the function to load chapter 2
+     loadShlokas("data/chapter1.json");
+
+     // Enter key press karne pe bhi search ho
+     document.getElementById("shlokaNumber").addEventListener("keypress", function (e) {
+       if (e.key === "Enter") {
+         searchShloka();
+       }
+     });
+    </script>
+    <script src="js/dark-mode.js"></script>
+  </body>
+</html>
